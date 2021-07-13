@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     InputStream inputStream;
     PhotoEditor mPhotoEditor;
     PhotoEditorView mPhotoEditorView;
+    TextView textView;
     EditText mEditText;
 
 
