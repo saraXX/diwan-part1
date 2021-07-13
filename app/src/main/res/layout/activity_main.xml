@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/chooseImgView"
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        android:text="chose img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+    <Button
+        android:id="@+id/addTextBtnView"
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        android:text="text"
+        app:layout_constraintLeft_toRightOf="@id/chooseImgView"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+    <Button
+        android:id="@+id/undoBtnView"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:text="undo"
+        app:layout_constraintLeft_toRightOf="@id/addTextBtnView"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+    <Button
+        android:id="@+id/redoBtnView"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:text="redo"
+        app:layout_constraintLeft_toRightOf="@id/undoBtnView"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+    <Button
+        android:id="@+id/clearView"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:text="clear"
+        app:layout_constraintLeft_toRightOf="@id/redoBtnView"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+    <Button
+        android:id="@+id/saveView"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:text="save"
+        app:layout_constraintLeft_toRightOf="@id/clearView"
+        app:layout_constraintTop_toTopOf="@id/photoEditorView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgView"
+        app:layout_constraintTop_toBottomOf="@id/chooseImgView"
+        />
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photoEditorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/imgView"
+        app:photo_src="@drawable/uqt" />
+    <EditText
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:id="@+id/TextView"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
